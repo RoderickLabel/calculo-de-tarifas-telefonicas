@@ -9,7 +9,7 @@ class TarifaFixaTest extends TestCase
 
     protected function setUp() 
     {
-        $this->tarifa = new TarifaFixa(11, 16, "1,90");
+        $this->tarifa = new TarifaFixa(11, 16, 1.9);
         parent::setUp();
     }
 

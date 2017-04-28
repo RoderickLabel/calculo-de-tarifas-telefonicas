@@ -2,8 +2,6 @@
 
 namespace App\Telefonia;
 
-use App\Telefonia\Conversao;
-
 class TarifaFixa 
 {
 
@@ -25,10 +23,9 @@ class TarifaFixa
 
     public function __construct($origem, $destino, $valor)
     {
-        $conversao = new Conversao($valor);
         $this->origem = $origem;
         $this->destino = $destino;
-        $this->valor = ($conversao->convertePonto());
+        $this->valor = $valor;
     }
 
     /**
