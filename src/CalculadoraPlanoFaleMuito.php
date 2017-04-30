@@ -49,6 +49,9 @@ class CalculadoraPlanoFaleMuito implements CalculadoraInterface
 	{
 		foreach($this->tarifas as $tarifa) {
 			if ($this->isChamadaValida($tarifa)) {
+				if ($this->chamada->getMinutos() <= $this->plano->getMinutos()) {
+					return 0;
+				}
 				return ($tarifa->getValor() * 1.1) * ($this->chamada->getMinutos() - $this->plano->getMinutos());
 			}
 		}

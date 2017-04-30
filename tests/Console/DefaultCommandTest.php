@@ -1,6 +1,6 @@
 <?php 
 
-namespace Tests\Command;
+namespace Tests\Console;
 
 //use AppBundle\Command\CreateUserCommand;
 //use Symfony\Bundle\FrameworkBundle\Console\Application;

@@ -1,7 +1,8 @@
 {
     "require": {
         "symfony/console": "^3.2",
-        "phpunit/phpunit": "^6.1"
+        "phpunit/phpunit": "^6.1",
+        "league/csv": "^8.2"
     },
     "autoload": {
         "psr-4": {

@@ -46,9 +46,9 @@ class CalculadoraPlanoPadrao implements CalculadoraInterface
 	
 	public function getValorDaChamada()
 	{
-		foreach($this->tarifas as $tarifa) {			
-			if ($this->isChamadaValida($tarifa)) {				
-				return $tarifa->getValor() * $this->chamada->getMinutos();
+		foreach($this->tarifas as $tarifa) {
+			if ($this->isChamadaValida($tarifa)) {	
+				return ($tarifa->getValor() * $this->chamada->getMinutos());
 			}
 		}
 		return null;

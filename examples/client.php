@@ -16,26 +16,6 @@
  * LinhaCli
  */
 
-$tarifas = new LeagueCSV("tarifa_fixa.csv")->item(10);
-$planos = new LeagueCSV("planos.csv")->item(10);
-
-$chamada = new Chamada(18, 11, 200);
-$calculadora = new CalculadoraDeChamadas($chamada);
-
-foreach ($tarifas as $tarifa) {
-    $calculadora->addTarifa(new Tarifa(18, 11, 1.5));
-}
-
-foreach ($planos as $plano) {    
-    $calculadora->addPlano(new Plano("FaleMuito 120", 120));
-}
-
-$tabela = new TabelaCli();
-foreach($calculadora->getListagem() as $linha) {
-    $tabela->addLinha(new Linha($linha->getPlano(), $linha->getValor()));
-}
-$tabela->exibeTabela();
-
 // busca tarifa 
 // if ( busca válida, origem e destino baterem )
 //      varre planos
@@ -58,10 +38,10 @@ $calculo60    = new CalculadoraPlanoFaleMuito($chamada, $plano60);
 $calculo120   = new CalculadoraPlanoFaleMuito($chamada, $plano120);
 
 foreach ($tarifas as $tarifa) {
-    $calculoPadrao->addTarifa( new Tarifa($tarifa[0], $tarifa[1], $tarifa[2]]) );
-    $calculo30->addTarifa( new Tarifa($tarifa[0], $tarifa[1], $tarifa[2]]) );
-    $calculo60->addTarifa( new Tarifa($tarifa[0], $tarifa[1], $tarifa[2]]) );
-    $calculo120->addTarifa( new Tarifa($tarifa[0], $tarifa[1], $tarifa[2]]) );
+    $calculoPadrao->addTarifa( new Tarifa($tarifa[0], $tarifa[1], $tarifa[2]) );
+    $calculo30->addTarifa( new Tarifa($tarifa[0], $tarifa[1], $tarifa[2]) );
+    $calculo60->addTarifa( new Tarifa($tarifa[0], $tarifa[1], $tarifa[2]) );
+    $calculo120->addTarifa( new Tarifa($tarifa[0], $tarifa[1], $tarifa[2]) );
 }
 
 $tabela = new TabelaCli();

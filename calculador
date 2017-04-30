@@ -1,5 +1,6 @@
 #!/usr/bin/env php
-<?php
+<?php 
+
 require_once(__DIR__.'/vendor/autoload.php');
 
 use Symfony\Component\Console\Application;
@@ -8,7 +9,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-use App\Command\DefaultCommand;
+use App\Console\DefaultCommand;
 
 $application = new Application('echo', '1.0.0');
 $command = new DefaultCommand();
