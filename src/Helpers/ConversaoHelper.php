@@ -1,10 +1,9 @@
 <?php 
 
-namespace App\Telefonia;
+namespace App\Helpers;
 
-class Conversao
-{
-    
+class ConversaoHelper
+{    
     private $valor;
 
     public function __construct($valor)
@@ -30,5 +29,4 @@ class Conversao
     {
         return number_format($this->valor, 2, ',', '.');
     }
-
 }

@@ -1,22 +1,23 @@
 <?php 
 
-namespace App\Telefonia;
+namespace App;
 
-class TarifaFixa 
+use App\Interfaces\TarifaInterface;
+
+class Tarifa implements TarifaInterface
 {
-
     /**
-     * @var string $origem
+     * @var int $origem
      */
     private $origem;
 
     /**
-     * @var string $destino
+     * @var int $destino
      */
     private $destino;
 
     /**
-     * @var string $valor
+     * @var float $valor
      */
     private $valor;
 
@@ -29,27 +30,26 @@ class TarifaFixa
     }
 
     /**
-     * @return string 
+     * @return int 
      */
-    public function getOrigem ()
+    public function getDddOrigem ()
     {
         return $this->origem;
     }
 
     /**
-     * @return string 
+     * @return int 
      */
-    public function getDestino ()
+    public function getDddDestino ()
     {
         return $this->destino;
     }
 
     /**
-     * @return string 
+     * @return float 
      */
     public function getValor ()
     {
         return $this->valor;
     }
-
 }

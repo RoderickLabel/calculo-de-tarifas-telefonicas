@@ -1,6 +1,11 @@
 # Vendor
 /vendor/*
 
+# Eclipse Files
+.buildpath
+.project
+.settings/*
+
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*

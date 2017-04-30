@@ -1,27 +1,27 @@
 <?php 
 
 use PHPUnit\Framework\TestCase;
-use App\Telefonia\TarifaFixa;
+use App\Tarifa;
 
-class TarifaFixaTest extends TestCase
+class TarifaTest extends TestCase
 {
     private $tarifa;
 
     protected function setUp() 
     {
-        $this->tarifa = new TarifaFixa(11, 16, 1.9);
+        $this->tarifa = new Tarifa(11, 16, 1.9);
         parent::setUp();
     }
 
-    public function testGetOrigem()
+    public function testGetDddOrigem()
     {
-        $origem = $this->tarifa->getOrigem();
+        $origem = $this->tarifa->getDddOrigem();
         $this->assertEquals(11, $origem);
     }
 
-    public function testGetDestino()
+    public function testGetDddDestino()
     {
-        $destino = $this->tarifa->getDestino();
+    	$destino = $this->tarifa->getDddDestino();
         $this->assertEquals(16, $destino);
     }
 
@@ -30,7 +30,4 @@ class TarifaFixaTest extends TestCase
         $valor = $this->tarifa->getValor();
         $this->assertEquals(1.9, $valor);
     }
-
-
-
 }
