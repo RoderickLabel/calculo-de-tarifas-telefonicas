@@ -4,6 +4,9 @@ namespace App;
 
 use App\Interfaces\TarifaInterface;
 
+/**
+ * @author Rodrigo Ruotolo <roderickruotolo@gmail.com>
+ */
 class Tarifa implements TarifaInterface
 {
     /**
@@ -21,7 +24,12 @@ class Tarifa implements TarifaInterface
      */
     private $valor;
 
-
+	/**
+	 * 
+	 * @param int $origem
+	 * @param int $destino
+	 * @param float $valor
+	 */
     public function __construct($origem, $destino, $valor)
     {
         $this->origem = $origem;

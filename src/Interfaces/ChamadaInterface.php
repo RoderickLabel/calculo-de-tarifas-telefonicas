@@ -2,8 +2,19 @@
 
 namespace App\Interfaces;
 
+/**
+ * @author Rodrigo Ruotolo <roderickruotolo@gmail.com>
+ */
 interface ChamadaInterface
 {
+	/**
+	 *
+	 * @param int $dddOrigem
+	 * @param int $dddDestino
+	 * @param float $minutos
+	 */
+	public function __construct($dddOrigem, $dddDestino, $minutos);
+	
 	/**
 	 * @return string
 	 */

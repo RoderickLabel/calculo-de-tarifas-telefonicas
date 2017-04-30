@@ -16,6 +16,12 @@ use App\Tarifa;
 use App\CalculadoraPlanoPadrao;
 use App\CalculadoraPlanoFaleMuito;
 
+/**
+ * 
+ * Realiza as configurações preliminares do Symfony Console
+ * e seu respectivo comportamento ao iniciar
+ * @author Rodrigo Ruotolo <roderickruotolo@gmail.com>
+ */
 class DefaultCommand extends Command
 {
     protected function configure()

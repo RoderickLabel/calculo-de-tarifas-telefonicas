@@ -5,7 +5,7 @@ namespace App;
 use App\Interfaces\PlanoInterface;
 
 /**
- * @author roderick <roderickruotolo@gmail.com>
+ * @author Rodrigo Ruotolo <roderickruotolo@gmail.com>
  */
 class Plano implements PlanoInterface
 {    
@@ -19,7 +19,11 @@ class Plano implements PlanoInterface
      */
     private $minutos;
 
-
+	/**
+	 * 
+	 * @param string $titulo
+	 * @param int $minutos
+	 */
     public function __construct($titulo, $minutos)
     {
         $this->titulo = $titulo;

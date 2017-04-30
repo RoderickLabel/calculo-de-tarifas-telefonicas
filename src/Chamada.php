@@ -5,7 +5,7 @@ namespace App;
 use App\Interfaces\ChamadaInterface;
 
 /**
- * @author roderick <roderickruotolo@gmail.com>
+ * @author Rodrigo Ruotolo <roderickruotolo@gmail.com>
  */
 class Chamada implements ChamadaInterface
 {
@@ -24,7 +24,12 @@ class Chamada implements ChamadaInterface
 	 */
 	private $minutos;
 	
-	
+	/**
+	 * 
+	 * @param int $dddOrigem
+	 * @param int $dddDestino
+	 * @param float $minutos
+	 */
 	public function __construct($dddOrigem, $dddDestino, $minutos)
 	{
 		$this->dddOrigem = $dddOrigem;

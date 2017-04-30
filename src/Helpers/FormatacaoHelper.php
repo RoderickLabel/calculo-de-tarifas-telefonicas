@@ -1,7 +1,9 @@
 <?php 
 
 namespace App\Helpers;
-
+/**
+ * @author Rodrigo Ruotolo <roderickruotolo@gmail.com>
+ */
 class FormatacaoHelper
 {    
     private $valor;
