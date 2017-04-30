@@ -27,3 +27,7 @@ Os três parâmetros (DDD de Origem, DDD de Destino e Minutos de Ligação) são
 ```
 $ php calculador 18 11 200
 ```
+Para ajuda ao efetuar o comando
+```
+$ php calculador --help
+```
